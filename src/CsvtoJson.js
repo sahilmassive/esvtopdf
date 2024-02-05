@@ -11,10 +11,13 @@ const CsvtoJson = () => {
       header: true,
       dynamicTyping: true,
       complete: (result) => {
-        setJsonResult(result.data);
+        const res = result.data.filter((item) => item.Org !== null);
+        console.log("res", res);
+        setJsonResult(res);
       },
     });
   };
+  console.log(jsonResult);
 
   const handleFileChange = (event) => {
     const file = event.target.files[0];
@@ -66,7 +69,21 @@ const CsvtoJson = () => {
             </pre>
           </div>
         )}
-        <button onClick={handleAllButtons}>download all</button>
+        <button
+          style={{
+            position: "absolute",
+            top: "34px",
+            right: "38px",
+            width: "60px",
+            height: "60px",
+            borderRadius: "60px",
+            background: "#0275d8",
+            border: "none",
+          }}
+          onClick={handleAllButtons}
+        >
+          <i class="fa-solid fa-download"></i>
+        </button>
       </div>
     </div>
   );

@@ -18,6 +18,32 @@ h6 {
   pointer-events: none;
 }
 
+/* Fonts */
+@font-face {
+  font-family: myFirstFont;
+  src: url("/src/Fonts/Qanelas-Font-Family/woff2/QanelasSoft-Bold.woff2");
+}
+@font-face {
+  font-family: mySecondFont;
+  src: url("/src/Fonts/Qanelas-Font-Family/woff2/QanelasSoft-SemiBold.woff2");
+}
+@font-face {
+  font-family: myThirdFont;
+  src: url("/src/Fonts/Qanelas-Font-Family/woff2/QanelasSoft-Medium.woff2");
+}
+@font-face {
+  font-family: myFourthFont;
+  src: url("/src/Fonts/Qanelas-Font-Family/woff2/QanelasSoft-Light.woff2");
+}
+@font-face {
+  font-family: myFifthFont;
+  src: url("/src/Fonts/Qanelas-Font-Family/otf/QanelasSoft-Bold.otf");
+}
+@font-face {
+  font-family: mySixthFont;
+  src: url("Fonts/Qanelas-Font-Family/ttf/QanelasSoft-Black.ttf");
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -46,4 +72,9 @@ h6 {
   to {
     transform: rotate(360deg);
   }
+}
+
+.fa-download {
+  color: #fff;
+  font-size: 24px;
 }
